@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { Expense } from './types';
+import ExpenseForm from './components/ExpenseForm';
+import ExpenseList from './components/ExpenseList';
+import SpendingPieChart from './components/SpendingPieChart';
 
-function App() {
+const App: React.FC = () => {
+  const [expenses, setExpenses] = useState <Expense[]>([]);
+
+  const addExpense = (expense: Omit<Expense, 'id'>) => {
+    setExpenses([...expenses,{...expense, id: Date.now().toString() }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{padding: '2rem'}}>
+      <h1>My Spending Tracker</h1>
+      <ExpenseForm onSubmit={addExpense}/>
+      <ExpenseList expenses={expenses}/>
+      <SpendingPieChart expenses={expenses}/>
     </div>
   );
-}
+};
+
 
 export default App;
