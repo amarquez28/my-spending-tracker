@@ -87,6 +87,26 @@ button[type="submit"]:hover{
   color:#ffffff;
   background-color: #02165d;
 }
+.main-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.expense-list-container{
+  flex: 1;
+  min-width: 100px;
+  max-width: 400px;
+  margin-left: 300px;
+}
+.pie-chart-container{
+  flex: 1;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-left: 200px;
+}
 ul{
   list-style: none;
   padding: 0;
@@ -100,4 +120,5 @@ li{
   background-color: #202020;
   margin-bottom: 0.5rem;
   border-radius: 4px;
+  max-width: 500px;
 }

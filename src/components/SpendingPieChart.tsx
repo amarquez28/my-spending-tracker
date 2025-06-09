@@ -34,7 +34,7 @@ const SpendingPieChart: React.FC<SpendingPieChartProps> = ({expenses}) => {
         ],
     };
     return (
-        <div style={{maxWidth: '400px', margin: '2rem auto'}}>
+        <div className="pie-chart-container">
             <h2>Spending Breakdown</h2>
             <Pie data={data}/>
         </div>

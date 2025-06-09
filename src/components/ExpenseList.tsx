@@ -6,9 +6,9 @@ interface ExpenseListProps {
 
 const ExpenseList: React.FC<ExpenseListProps>  = ({ expenses }) => {
     return(
-        <div>
+        <div className="expense-list-container">
             <h2>Expenses</h2>
-            <ul>
+            <ul >
                 {expenses.map((expense) => (
                     <li key={expense.id}>
                         {expense.description}: ${expense.amount.toFixed(2)} ({expense.category})

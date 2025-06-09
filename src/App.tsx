@@ -35,8 +35,10 @@ const App: React.FC = () => {
     <div style={{padding: '2rem'}}>
       <h1>My Spending Tracker</h1>
       <ExpenseForm onSubmit={addExpense}/>
-      <ExpenseList expenses={expenses}/>
-      <SpendingPieChart expenses={expenses}/>
+      <div className='main-content'>
+        <ExpenseList expenses={expenses}/>
+        <SpendingPieChart expenses={expenses}/>
+      </div>
     </div>
   );
 };
