@@ -4,6 +4,7 @@ import { Expense } from './types';
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
 import SpendingPieChart from './components/SpendingPieChart';
+import Percentages from './components/Percentages';
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState <Expense[]> (() => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <ExpenseList expenses={expenses}/>
         <SpendingPieChart expenses={expenses}/>
       </div>
+        <Percentages expenses={expenses}/>
     </div>
   );
 };

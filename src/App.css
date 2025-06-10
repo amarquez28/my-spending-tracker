@@ -107,6 +107,20 @@ button[type="submit"]:hover{
   margin: 0 auto;
   margin-left: 200px;
 }
+.percentages-container{
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 300px;
+  max-width: 400px;
+}
+.percentages-container h2{
+  margin-top: 0;
+  text-align: center;
+}
+.percentages-container li{
+  font-weight: 500;
+}
+
 ul{
   list-style: none;
   padding: 0;
