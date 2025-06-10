@@ -5,7 +5,7 @@ interface ExpenseFormProps{
     onSubmit: (expense: Omit<Expense, 'id'>) => void;
 }
 
-const categoriesList = ['Rent', 'Groceries', 'Bills', 'Entertainment', 'Subscription','Miscellaneous '];
+const categoriesList = ['Rent', 'Groceries', 'Bills', 'Entertainment', 'Subscription','Miscellaneous'];
 
 const ExpenseForm: React.FC<ExpenseFormProps> = ({onSubmit}) => {
     const [description, setDescription] = useState('');

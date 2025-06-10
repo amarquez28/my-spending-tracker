@@ -25,7 +25,7 @@ const Percentages: React.FC<PercentagesListProps> = ({expenses}) => {
             <h2>Percent By Category</h2>
             <ul>
                 {Percentages.map(({category, percentage}) =>(
-                    <li key={category}>
+                    <li key={category} >
                         <span>{category}:</span>
                         <strong>{percentage}%</strong>
                     </li>

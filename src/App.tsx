@@ -32,12 +32,16 @@ const App: React.FC = () => {
     setExpenses([...expenses,{...expense, id: Date.now().toString() }]);
   };
 
+  const deleteExpense = (id: string) => {
+    setExpenses(expenses.filter(expense => expense.id !== id));
+  };
+
   return (
     <div style={{padding: '2rem'}}>
       <h1>My Spending Tracker</h1>
       <ExpenseForm onSubmit={addExpense}/>
       <div className='main-content'>
-        <ExpenseList expenses={expenses}/>
+        <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense}/>
         <SpendingPieChart expenses={expenses}/>
       </div>
         <Percentages expenses={expenses}/>

@@ -23,12 +23,12 @@ const SpendingPieChart: React.FC<SpendingPieChartProps> = ({expenses}) => {
                 label: 'Spending by Category',
                 data: Object.values(spendingByCategory),
                 backgroundColor: [
-                    'rgba(255, 255, 255, 0.51)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgb(0, 25, 98)',
-                    'rgb(255, 0, 144)',
-                    'rgba(119, 55, 249, 0.69)',
-                    'rgb(172, 2, 2)',
+                    '#1282A2',//cerulean
+                    '#001F54',//penn blue
+                    '#C0B7B1', //silver
+                    '#8E6E53',//some brown
+                    '#048A81',//taupe
+                    '#48392A',//dark cyan
                 ],
             },
         ],
