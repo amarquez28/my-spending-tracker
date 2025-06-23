@@ -6,6 +6,8 @@ import ExpenseList from './components/ExpenseList';
 import SpendingPieChart from './components/SpendingPieChart';
 import Percentages from './components/Percentages';
 
+//we create a React Functional Component ('React.FC')
+//then specify the shape that its props will have, syntax for this will be React.FC<interfaceName> 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState <Expense[]> (() => {
     const savedExpenses = localStorage.getItem('expenses');
